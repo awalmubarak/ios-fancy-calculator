@@ -62,13 +62,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func equalsClicked(_ sender: UIButton){
-        calculateTotal()
-    }
-    
-    func calculateTotal(){
         if firstValue.isEmpty{
             return
         }
+        if let num = resultLabel.text{
+            if num != ""{
+                calculateTotal()
+            }
+        }
+    }
+    
+    func calculateTotal(){
+        
         
         var result: String = ""
         
